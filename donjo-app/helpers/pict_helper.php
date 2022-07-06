@@ -562,9 +562,7 @@ function resizeImage($filepath_in, $tipe_file, $dimensi, $filepath_out = '')
     }
 
     $is_png = ($tipe_file == 'image/png' || $tipe_file == 'image/x-png');
-    phpinfo();
-    die();
-
+    
     $image      = ($is_png) ? imagecreatefrompng($filepath_in) : imagecreatefromjpeg($filepath_in);
     $width      = imageSX($image);
     $height     = imageSY($image);
