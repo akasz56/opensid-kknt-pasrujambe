@@ -121,16 +121,16 @@
 														<td class="text-right"><a href="<?= site_url("penduduk/lap_statistik/{$id_cluster}/11")?>"><?= $data['sakit_P']?></a></td>
 														<td class="text-right"><a href="<?= site_url("penduduk/lap_statistik/{$id_cluster}/12")?>"><?= $data['hamil']?></a></td>
 														<?php
-                                                            $bayi    = $bayi + $data['bayi'];
-                                                            $balita  = $balita + $data['balita'];
-                                                            $sd      = $sd + $data['sd'];
-                                                            $smp     = $smp + $data['smp'];
-                                                            $sma     = $sma + $data['sma'];
-                                                            $lansia  = $lansia + $data['lansia'];
-                                                            $cacat   = $cacat + $data['cacat'];
-                                                            $sakit_L = $sakit_L + $data['sakit_L'];
-                                                            $sakit_P = $sakit_P + $data['sakit_P'];
-                                                            $hamil   = $hamil + $data['hamil'];
+                                                            $bayi    = (int)$bayi + (int)$data['bayi'];
+                                                            $balita  = (int)$balita + (int)$data['balita'];
+                                                            $sd      = (int)$sd + (int)$data['sd'];
+                                                            $smp     = (int)$smp + (int)$data['smp'];
+                                                            $sma     = (int)$sma + (int)$data['sma'];
+                                                            $lansia  = (int)$lansia + (int)$data['lansia'];
+                                                            $cacat   = (int)$cacat + (int)$data['cacat'];
+                                                            $sakit_L = (int)$sakit_L + (int)$data['sakit_L'];
+                                                            $sakit_P = (int)$sakit_P + (int)$data['sakit_P'];
+                                                            $hamil   = (int)$hamil + (int)$data['hamil'];
 
                                                             foreach ($jenis_cacat as $key => $val):
                                                                 $total_cacat[$key] += $data[$val];

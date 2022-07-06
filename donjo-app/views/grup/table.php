@@ -77,7 +77,7 @@
 															<?php endif; ?>
 															<td class="padat"><?=$data['no']?></td>
 															<td class="aksi">
-															<?php if ($data[id] != 1): ?>
+															<?php if ($data['id'] != 1): ?>
 																<a href="<?= site_url("grup/form/{$p}/{$o}/{$data['id']}/1")?>" class="btn bg-info btn-flat btn-sm"  title="Lihat"><i class='fa fa-eye fa-sm'></i></a>
 															<?php endif; ?>
 															<?php if ($this->CI->cek_hak_akses('u') && $data['jenis'] != 1): ?>

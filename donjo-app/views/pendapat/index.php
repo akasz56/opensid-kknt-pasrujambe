@@ -78,7 +78,7 @@ defined('BASEPATH') || exit('No direct script access allowed');
 								<div class="col-sm-3 col-xs-6">
 									<div class="description-block border-left border-right">
 										<img src="<?= base_url(PENDAPAT . underscore(strtolower($value)) . '.png'); ?>">
-										<h5 class="description-header"><?= persen(${$key} / $main['total']); ?></h5>
+										<h5 class="description-header"><?= $main['total'] ? persen(${$key} / $main['total']) : "0%" ; ?></h5>
 										<span class="description-text"><?= $value; ?></span>
 									</div>
 								</div>

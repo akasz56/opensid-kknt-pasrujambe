@@ -447,16 +447,15 @@ class Web_artikel_model extends MY_Model
 
         $list_gambar = $this->db
             ->select('gambar, gambar1, gambar2, gambar3')
-            ->where('a.id', $id)
-            ->where()
-            ->get('artikel a')
+            ->where('id', $id)
+            ->get('artikel')
             ->row_array();
 
         foreach ($list_gambar as $key => $gambar) {
             HapusArtikel($gambar);
         }
 
-        $outp = $this->db->where('a.id', $id)->delete('artikel a');
+        $outp = $this->db->where('id', $id)->delete('artikel');
 
         status_sukses($outp, $gagal_saja = true); //Tampilkan Pesan
     }

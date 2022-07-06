@@ -115,7 +115,7 @@
 																		<?php if ($this->CI->cek_hak_akses('u')): ?>
 																			<a href="<?= site_url("surat_master/form_upload/{$p}/{$o}/{$data['url_surat']}")?>" data-remote="false" data-toggle="modal" data-target="#modalBox" title="Unggah Template Format Surat" data-title="Unggah Template Format Surat" class="btn btn-social btn-flat bg-orange btn-sm"><i class='fa fa-upload'></i> Unggah</a>
 																		<?php endif; ?>
-																		<?php $surat = SuratExport($data[url_surat]); ?>
+																		<?php $surat = SuratExport($data['url_surat']); ?>
 																		<?php if ($surat != ''): ?>
 																			<a href="<?= base_url($surat)?>" class="btn btn-social btn-flat bg-purple btn-sm"  title="Unduh Template Format Surat"><i class="fa fa-download"></i>Unduh </a>
 																		<?php endif; ?>

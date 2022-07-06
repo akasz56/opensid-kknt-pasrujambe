@@ -264,7 +264,7 @@ function httpPost($url, $params)
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, false);
-        curl_setopt($ch, CURLOPT_POST, count($postData));
+        curl_setopt($ch, CURLOPT_POST, count((array)$postData));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 
         // Batasi waktu koneksi dan ambil data, supaya tidak menggantung kalau ada error koneksi
@@ -585,7 +585,7 @@ function ambilBerkas($nama_berkas, $redirect_url = null, $unique_id = null, $lok
 function autocomplete_data_ke_str($data)
 {
     $str    = '';
-    $keys   = array_keys($data[0]);
+    $keys   = array_keys((array)$data[0]);
     $values = [];
 
     foreach ($keys as $key) {
@@ -790,9 +790,12 @@ if (! function_exists('warna')) {
     }
 }
 
-function buat_slug($data_slug)
+function buat_slug(array $data_slug)
 {
-    return $data_slug['thn'] . '/' . $data_slug['bln'] . '/' . $data_slug['hri'] . '/' . $data_slug['slug'];
+    if (is_array($data_slug)) {
+        return $data_slug['thn'] . '/' . $data_slug['bln'] . '/' . $data_slug['hri'] . '/' . $data_slug['slug'];
+    }
+    die();
 }
 
 function namafile($str)

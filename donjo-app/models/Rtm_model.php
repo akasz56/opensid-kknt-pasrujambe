@@ -340,7 +340,7 @@ class Rtm_model extends MY_Model
         $this->db
             ->select('t.nama')
             ->from('tweb_rtm u')
-            ->join('tweb_penduduk t', 'u.nik_kepala = t.id', LEFT);
+            ->join('tweb_penduduk t', 'u.nik_kepala = t.id', 'LEFT');
 
         $data = $this->db->get()->result_array();
 
