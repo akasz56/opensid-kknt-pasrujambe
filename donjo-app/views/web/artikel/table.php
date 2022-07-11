@@ -9,10 +9,10 @@
 </script>
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1>Artikel test</h1>
+	<h1>Artikel</h1>
 		<ol class="breadcrumb">
 			<li><a href="<?= site_url('hom_sid')?>"><i class="fa fa-home"></i> Home</a></li>
-			<li class="active">Artikel test</li>
+			<li class="active">Artikel</li>
 		</ol>
 	</section>
 	<section class="content" id="maincontent">

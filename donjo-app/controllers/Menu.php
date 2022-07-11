@@ -83,7 +83,7 @@ class Menu extends Admin_Controller
             $this->session->per_page = $per_page;
         }
 
-        $data['menu_utama'] = ($data['parrent'] != 0) ? $this->web_menu_model->get_menu($data['parrent']) : null; // Untuk dapatkan nama menu utama
+        $data['menu_utama'] = ($data['parrent']) ? $this->web_menu_model->get_menu($data['parrent']) : null; // Untuk dapatkan nama menu utama
         $data['func']       = 'index';
         $data['set_page']   = $this->set_page;
         $data['per_page']   = $this->session->per_page;

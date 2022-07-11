@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
 <div class="content_right">
-	<div id="jam" style="margin:5px 0 5px 0; background:#e64946;border:3px double #ffffff;padding:3px;width:auto;" align="center;"></div>
+	<div id="jam" style="margin:5px 0 5px 0; background:#18314F;border:3px double #ffffff;padding:3px;width:auto;" align="center;"></div>
 
 	<!-- Tampilkan Widget -->
 	<?php

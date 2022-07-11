@@ -18,7 +18,7 @@
 			company_logo_url: "<?= gambar_desa($desa['logo']); ?>", // URL of company logo (png, jpg, gif)
 			greeting_message: "Selamat Datang di <?= ucwords($this->setting->sebutan_desa).' '.$desa['nama_desa'];?>.",
 			//call_to_action: "Kontak",
-			button_color: "#e64946",
+			button_color: "#18314F",
 			position: "left", // Position may be 'right' or 'left'
 			order: "whatsapp,facebook,telegram,email" // Order of buttons
 		};
